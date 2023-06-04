@@ -1,2 +1,18 @@
-<app-toolbar></app-toolbar>
-<router-outlet></router-outlet>
+
+<mat-drawer-container class="example-container" full>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+        <mat-toolbar color="primary"></mat-toolbar>
+    </mat-drawer>
+    
+    <div class="example-sidenav-content">
+        <app-toolbar></app-toolbar>
+        <router-outlet></router-outlet>
+      <button type="button" mat-button (click)="drawer.toggle()">
+        Toggle sidenav
+      </button>
+    </div>
+  
+  </mat-drawer-container>
+  
+  
+  
