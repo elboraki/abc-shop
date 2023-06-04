@@ -1,2 +1,34 @@
-<app-toolbar></app-toolbar>
-<router-outlet></router-outlet>
+
+<mat-drawer-container class="example-container" full>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+        <mat-toolbar color="primary">
+            Menu
+        </mat-toolbar>
+
+        <mat-list>
+            <mat-list-item>
+                item 1
+            </mat-list-item>
+
+            <mat-list-item>
+                item 2
+            </mat-list-item>
+
+            <mat-list-item>
+                item 3
+            </mat-list-item>
+        </mat-list>
+    </mat-drawer>
+    <app-toolbar></app-toolbar>
+    <div class="example-sidenav-content">
+        
+        <router-outlet></router-outlet>
+      <button type="button" mat-button (click)="drawer.toggle()">
+        Toggle sidenav
+      </button>
+    </div>
+  
+  </mat-drawer-container>
+  
+  
+  
