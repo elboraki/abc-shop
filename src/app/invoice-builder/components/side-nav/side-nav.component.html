@@ -1,8 +1,14 @@
 
 <mat-drawer-container class="example-container" full>
-    <mat-drawer #drawer class="example-sidenav" mode="side">
-        <mat-toolbar color="primary">
-            Menu
+    <mat-drawer #drawer class="example-sidenav" mode="over" mat-elevation-z10>
+        <mat-toolbar color="primary" class="menu-title">
+            
+            <button mat-button>
+                <mat-icon>menu</mat-icon>
+                
+              </button>
+              
+            
         </mat-toolbar>
 
         <mat-list>
@@ -19,13 +25,11 @@
             </mat-list-item>
         </mat-list>
     </mat-drawer>
-    <app-toolbar></app-toolbar>
+    <app-toolbar (sideNavToggle)="drawer.toggle()"></app-toolbar>
     <div class="example-sidenav-content">
-        
+
         <router-outlet></router-outlet>
-      <button type="button" mat-button (click)="drawer.toggle()">
-        Toggle sidenav
-      </button>
+
     </div>
   
   </mat-drawer-container>
