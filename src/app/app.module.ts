@@ -17,7 +17,7 @@ import { DashboardModule } from './dashboard/dashboard.module';
     BrowserAnimationsModule,
     MaterialModule,
     DashboardModule
-  ],
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

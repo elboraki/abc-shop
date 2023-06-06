@@ -7,6 +7,7 @@ import { MainContentComponent } from './components/main-content/main-content.com
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { MaterialModule } from '../shared/material.module';
+import { InvoicesModule } from '../invoices/invoices.module';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { MaterialModule } from '../shared/material.module';
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    MaterialModule
+    MaterialModule,
+    InvoicesModule
   
   ],
   exports:[]
