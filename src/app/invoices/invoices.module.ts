@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { InvoicesListingComponent } from './components/invoices-listing/invoices-listing.component';
 import { MaterialModule } from '../shared/material.module';
 import { HttpClientModule } from '@angular/common/http';
+import { InvoiceService } from './services/invoice.service';
 
 
 
@@ -15,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     MaterialModule
   ],
-  exports:[InvoicesListingComponent]
+  exports: [InvoicesListingComponent],
+  providers:[InvoiceService]
 })
 export class InvoicesModule { }
