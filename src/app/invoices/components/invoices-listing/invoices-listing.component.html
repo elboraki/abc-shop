@@ -1,44 +1,60 @@
 <mat-card class="example-card">
-    <h3>Invoices</h3>
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <h3>Invoices</h3>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="item">
+      <th mat-header-cell *matHeaderCellDef>Item</th>
+      <td mat-cell *matCellDef="let element">{{ element.item }}</td>
+    </ng-container>
 
-      
-        <ng-container matColumnDef="item">
-          <th mat-header-cell *matHeaderCellDef> Item </th>
-          <td mat-cell *matCellDef="let element"> {{element.item}} </td>
-        </ng-container>
-      
-      
-        <ng-container matColumnDef="qte">
-          <th mat-header-cell *matHeaderCellDef> Qte </th>
-          <td mat-cell *matCellDef="let element"> {{element.qte}} </td>
-        </ng-container>
-      
-      
-        <ng-container matColumnDef="date">
-          <th mat-header-cell *matHeaderCellDef> Date </th>
-          <td mat-cell *matCellDef="let element"> {{element.date  | date }} </td>
-        </ng-container>
-      
+    <ng-container matColumnDef="qte">
+      <th mat-header-cell *matHeaderCellDef>Qte</th>
+      <td mat-cell *matCellDef="let element">{{ element.qte }}</td>
+    </ng-container>
 
-        <ng-container matColumnDef="due">
-          <th mat-header-cell *matHeaderCellDef> Due </th>
-          <td mat-cell *matCellDef="let element"> {{element.due | date }} </td>
-        </ng-container>
+    <ng-container matColumnDef="date">
+      <th mat-header-cell *matHeaderCellDef>Date</th>
+      <td mat-cell *matCellDef="let element">{{ element.date | date }}</td>
+    </ng-container>
 
-        <ng-container matColumnDef="rate">
-            <th mat-header-cell *matHeaderCellDef> Rate </th>
-            <td mat-cell *matCellDef="let element"> {{element.rate}} </td>
-          </ng-container>
-      
-          <ng-container matColumnDef="tax">
-            <th mat-header-cell *matHeaderCellDef> Tax </th>
-            <td mat-cell *matCellDef="let element"> {{element.tax}} </td>
-          </ng-container>
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-      </table>
-      
-      
+    <ng-container matColumnDef="due">
+      <th mat-header-cell *matHeaderCellDef>Due</th>
+      <td mat-cell *matCellDef="let element">{{ element.due | date }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="rate">
+      <th mat-header-cell *matHeaderCellDef>Rate</th>
+      <td mat-cell *matCellDef="let element">{{ element.rate }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="tax">
+      <th mat-header-cell *matHeaderCellDef>Tax</th>
+      <td mat-cell *matCellDef="let element">{{ element.tax }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef>Action</th>
+      <td mat-cell *matCellDef="let element">
+        <button
+          mat-icon-button
+          [matMenuTriggerFor]="menu"
+          aria-label="Example icon-button with a menu"
+        >
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>edit</mat-icon>
+            <span>Edit</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>delete</mat-icon>
+            <span>delete</span>
+          </button>
+        </mat-menu>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
 </mat-card>
-

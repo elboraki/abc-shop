@@ -8,6 +8,7 @@ import  {MatButtonModule} from '@angular/material/button'
 import  {MatIconModule} from '@angular/material/icon'
 import  {MatCardModule} from '@angular/material/card'
 import  {MatTableModule} from '@angular/material/table'
+import  {MatMenuModule} from '@angular/material/menu'
 
 
 
@@ -26,7 +27,8 @@ import  {MatTableModule} from '@angular/material/table'
     MatListModule,
     MatIconModule,
     MatCardModule,
-    MatTableModule
+    MatTableModule,
+    MatMenuModule
   ],
   exports:[
     MatSliderModule,
@@ -36,7 +38,8 @@ import  {MatTableModule} from '@angular/material/table'
     MatButtonModule,
     MatIconModule,
     MatCardModule,
-    MatTableModule
+    MatTableModule,
+    MatMenuModule
 
   ]
 })

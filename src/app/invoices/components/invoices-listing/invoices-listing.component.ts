@@ -11,7 +11,7 @@ export class InvoicesListingComponent implements OnInit {
 
   constructor(private invoiceService:InvoiceService) { }
 
-  displayedColumns: string[] = ['item', 'qte', 'date', 'due', 'rate', 'tax'];
+  displayedColumns: string[] = ['item', 'qte', 'date', 'due', 'rate', 'tax','action'];
   dataSource: Invoice[] = [];
 
   ngOnInit(): void {
