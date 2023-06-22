@@ -1,5 +1,15 @@
-<mat-card class="example-card">
-  <h3>Invoices</h3>
+<div class="container">
+
+  <mat-toolbar>
+   <span>Invoices</span>
+   <div class="add-invoice-btn">
+
+       <button mat-icon-button class="example-icon add-icon" aria-label="Example icon-button with heart icon">
+         <mat-icon>add</mat-icon>
+       </button>
+   </div>
+
+ </mat-toolbar>
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
     <ng-container matColumnDef="item">
       <th mat-header-cell *matHeaderCellDef>Item</th>
@@ -57,4 +67,4 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
-</mat-card>
+</div>
