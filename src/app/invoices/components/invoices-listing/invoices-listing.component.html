@@ -17,13 +17,13 @@
       
         <ng-container matColumnDef="date">
           <th mat-header-cell *matHeaderCellDef> Date </th>
-          <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+          <td mat-cell *matCellDef="let element"> {{element.date  | date }} </td>
         </ng-container>
       
 
         <ng-container matColumnDef="due">
           <th mat-header-cell *matHeaderCellDef> Due </th>
-          <td mat-cell *matCellDef="let element"> {{element.due}} </td>
+          <td mat-cell *matCellDef="let element"> {{element.due | date }} </td>
         </ng-container>
 
         <ng-container matColumnDef="rate">
