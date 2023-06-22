@@ -10,6 +10,6 @@ export class MainContentComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-  }
+  } 
 
 }

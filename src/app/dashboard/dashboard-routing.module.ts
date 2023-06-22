@@ -10,10 +10,7 @@ const routes: Routes = [
     path: '',
     component: DashboardComponent,
     children: [
-      {
-        path: '',
-        component: MainContentComponent
-      },
+
       {
         path: 'invoices',
         component: InvoicesListingComponent
@@ -21,7 +18,11 @@ const routes: Routes = [
       {
         path: 'clients',
         component: ClientsListingComponent
-      }
+      },
+      {
+        path: '**',
+        redirectTo: 'invoices'
+      },
     ]
   },
 ];
