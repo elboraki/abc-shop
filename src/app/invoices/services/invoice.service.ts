@@ -8,7 +8,7 @@ import { Invoice } from '../models/invoice';
 })
 
 export class InvoiceService {
-  BASE_URL="http://localost:3000/api/"
+  BASE_URL="http://localhost:3000/api"
   constructor(private httpClient:HttpClient) { }
 
   getInvoices():Observable<Invoice[]>{
